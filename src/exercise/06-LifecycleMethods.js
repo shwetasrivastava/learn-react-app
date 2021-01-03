@@ -29,7 +29,7 @@ class CompanyProfile extends Component {
      * We need to use componentDidMount lifecycle method to fetch company profile
      * information for given stock ticker using the DataAPI provided
      * 🧭  Add lifecycle method called componentDidMount
-     * 🧭  Inside that method you need to use the DataAPI that's already imported.
+     * 🧭  Inside that method you need to  the DataAPI that's already imported.
      *     Make a call to `getCompanyProfile()` method and pass the `stockTicker` from the props.
      *     This method will return a promise that resolves into `companyProfile` info
      * 🧭  Using the data from the promise use `setState` to set companyProfileInfo
@@ -43,7 +43,15 @@ class CompanyProfile extends Component {
      *             .catch(error => console.log(error))
      * */
     componentDidMount() {
-
+        DataAPI.getCompanyProfile(this.props.stockTicker).then(
+            profile => {
+                this.setState({
+                    companyProfileInfo: profile
+                })
+            }
+        ).catch(
+            error => console.log(error)
+        )
     }
 
     render() {

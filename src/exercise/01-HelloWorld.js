@@ -6,15 +6,16 @@ import React from 'react';
  * Follow the instruction inside return statement
  */
 function HelloWorld(props) {
+
     return (
-        /**
-         * ✏️ 
-         * Instead of returning null you would need to return a React element
-         * Use the React.createElement function to display a div
-         * and Hello World text inside the div
-         */
-        null
-    );
+    //     /**
+    //      * ✏️ 
+    //      * Instead of returning null you would need to return a React element
+    //      * Use the React.createElement function to display a div
+    //      * and Hello World text inside the div
+    //      */
+              <div>Hello World</div>
+     );
 }
 
 /**
